@@ -54,7 +54,7 @@ export default function RollMealButton() {
         }
         else {
             for(let i = 0; i < 7; i++){
-                mealList.push([{ name: "no meals exist", url: "notavalidurl"}])
+                mealList.push({ name: "no meals exist", url: "notavalidurl"})
             }
             
         }
