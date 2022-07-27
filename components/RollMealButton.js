@@ -91,7 +91,7 @@ export default function RollMealButton() {
                     </tr>
                     <tr>
                         {meals.map((meal,index) => 
-                            <th className={styles.tablerow} key={index} href={meal.url}>{meal.name}</th>
+                            <th className={styles.tablerow} key={index}><a href={meal.url}>{meal.name}</a></th>
                         )}
                     </tr>
                 </tbody>
