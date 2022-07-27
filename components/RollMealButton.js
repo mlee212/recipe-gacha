@@ -51,15 +51,15 @@ export default function RollMealButton() {
                     // console.log(i)
                 }
             }
-    
-            setMeals(mealList)
         }
         else {
             for(let i = 0; i < 7; i++){
-                setMeals([{ name: "no meals exist", url: "notavalidurl"}])
+                mealList.push([{ name: "no meals exist", url: "notavalidurl"}])
             }
-
+            
         }
+        setMeals(mealList)
+
         // console.log(result.length)
         // console.log(result[getRandomInt(result.length)].name)
 
