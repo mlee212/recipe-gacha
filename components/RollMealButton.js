@@ -7,7 +7,7 @@ export default function RollMealButton() {
         url: "",
     }])
 
-    const weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+    const [weekdays, setWeekdays] = useState([])
 
     function getRandomInt(max) {
         return Math.floor(Math.random() * max)
@@ -33,22 +33,33 @@ export default function RollMealButton() {
         const result = await response.json()
 
         var mealList = []
-        
-        for(let i = 0; i < 7; i++){
-            
-            if(getRandomInt(20) == 1) {
-                mealList.push({name: "EAT OUTSIDE!!!", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"})
-                // setMeals([...meals, {name: "EAT OUTSIDE!!!", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"}])
-                // console.log(i)
-            }
-            else {
-                mealList.push(result[getRandomInt(result.length)])
-                // setMeals([...meals, result[getRandomInt(result.length)]])
-                // console.log(i)
-            }
-        }
 
-        setMeals(mealList)
+        setWeekdays(["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"])
+        
+        if(result.length != 0) {
+    
+            for(let i = 0; i < 7; i++){
+                
+                if(getRandomInt(20) == 1) {
+                    mealList.push({name: "EAT OUTSIDE!!!", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"})
+                    // setMeals([...meals, {name: "EAT OUTSIDE!!!", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"}])
+                    // console.log(i)
+                }
+                else {
+                    mealList.push(result[getRandomInt(result.length)])
+                    // setMeals([...meals, result[getRandomInt(result.length)]])
+                    // console.log(i)
+                }
+            }
+    
+            setMeals(mealList)
+        }
+        else {
+            for(let i = 0; i < 7; i++){
+                setMeals([{ name: "no meals exist", url: "notavalidurl"}])
+            }
+
+        }
         // console.log(result.length)
         // console.log(result[getRandomInt(result.length)].name)
 
