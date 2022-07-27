@@ -12,9 +12,7 @@ export default function RecipeForm() {
         }
 
         const JSONdata = JSON.stringify(data)
-
         const endpoint = '/api/form'
-
         const options = {
             method: 'POST',
 
@@ -31,6 +29,7 @@ export default function RecipeForm() {
         
         alert(`is this what u entered: ${result.data}`)
     }
+
     // function submitNewRecipe () {
     //     /*Well if the elements are nested event.target won't always work
     //       since it refers to the target that triggers the event in the first place.*/
@@ -41,7 +40,6 @@ export default function RecipeForm() {
       //   console.log("hey")
       // }
     
-    
     return (
         <form onSubmit={handleSubmit}>
             <label>recipe name</label>
@@ -50,6 +48,5 @@ export default function RecipeForm() {
             <input type="text" id="url" name="url" />
             <button type="submit">Submit</button>
         </form>
-
     )
 }

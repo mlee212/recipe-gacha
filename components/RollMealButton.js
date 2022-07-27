@@ -1,16 +1,20 @@
 import {React, useState} from "react"
+import styles from '../styles/RollMealButton.module.css'
+
 export default function RollMealButton() {
-    const [meal, setMeal] = useState({
+    const [meals, setMeals] = useState([{
         name: "",
         url: "",
-    })
+    }])
+
+    const weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
 
     function getRandomInt(max) {
         return Math.floor(Math.random() * max)
     }
 
     const handleRoll = async (e) => {
-        console.log(meal)
+        // console.log(meals)
 
 
         const endpoint = '/api/rollmeal'
@@ -24,16 +28,27 @@ export default function RollMealButton() {
         }
 
         const response = await fetch(endpoint, options)
-        console.log(response)
+        // console.log(response)
 
         const result = await response.json()
 
-        if(getRandomInt(20) == 1) {
-            setMeal({name: "EAT OUTSIDE!!!", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"})
+        var mealList = []
+        
+        for(let i = 0; i < 7; i++){
+            
+            if(getRandomInt(20) == 1) {
+                mealList.push({name: "EAT OUTSIDE!!!", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"})
+                // setMeals([...meals, {name: "EAT OUTSIDE!!!", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"}])
+                // console.log(i)
+            }
+            else {
+                mealList.push(result[getRandomInt(result.length)])
+                // setMeals([...meals, result[getRandomInt(result.length)]])
+                // console.log(i)
+            }
         }
-        else {
-            setMeal(result[getRandomInt(result.length)])
-        }
+
+        setMeals(mealList)
         // console.log(result.length)
         // console.log(result[getRandomInt(result.length)].name)
 
@@ -56,9 +71,21 @@ export default function RollMealButton() {
     return (
         <>
             <button onClick={handleRoll}>Roll Meal </button>
-
             
-            <a href={meal.url}>{meal.name}</a>
+            <table className={styles.table}>
+                <tbody>
+                    <tr>
+                        {weekdays.map((day) =>
+                            <th className={styles.cell} key={day}>{day}</th>
+                        )}
+                    </tr>
+                    <tr>
+                        {meals.map((meal,index) => 
+                            <th className={styles.tablerow} key={index} href={meal.url}>{meal.name}</th>
+                        )}
+                    </tr>
+                </tbody>
+            </table>
             
 
         </>

@@ -1,0 +1,17 @@
+.cell {
+    width: 150px;
+    border: solid white 0px;
+    background: rgb(170, 170, 170);
+}
+
+.tablerow {
+    border: solid blue 0px;
+    background: rgb(216, 216, 216);
+    font-weight: normal
+    
+}
+
+.tablerow:hover {
+    color: blue;
+    cursor: pointer
+}
