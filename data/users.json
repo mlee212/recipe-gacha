@@ -1,0 +1,20 @@
+[
+    {
+        "firstName": "yoyoyo",
+        "lastName": "yoyoyo",
+        "username": "yoyoyo",
+        "hash": "$2a$10$P1tpnPIK1sehUtyVEUF.JuduZ4NkVA7SFk6m36UZsvroT4Pz9u6ry",
+        "id": 1,
+        "dateCreated": "2022-07-28T23:50:40.073Z",
+        "dateUpdated": "2022-07-28T23:50:40.073Z"
+    },
+    {
+        "firstName": "yoyoyo",
+        "lastName": "yoyoyo",
+        "username": "yoyoyoo",
+        "hash": "$2a$10$d3TDnerMwrGTxhh10PxI7eBrv/sZErSm4JV5gwdVMKH3s.Z7NKdD6",
+        "id": 2,
+        "dateCreated": "2022-07-29T00:57:40.122Z",
+        "dateUpdated": "2022-07-29T00:57:40.122Z"
+    }
+]

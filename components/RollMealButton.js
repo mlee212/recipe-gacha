@@ -1,5 +1,5 @@
 import {React, useState} from "react"
-import styles from '../styles/RollMealButton.module.css'
+import styles from '/styles/RollMealButton.module.css'
 
 export default function RollMealButton() {
     const [meals, setMeals] = useState([{
