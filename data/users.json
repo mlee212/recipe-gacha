@@ -16,5 +16,23 @@
         "id": 2,
         "dateCreated": "2022-07-29T00:57:40.122Z",
         "dateUpdated": "2022-07-29T00:57:40.122Z"
+    },
+    {
+        "firstName": "qwerty",
+        "lastName": "qwerty",
+        "username": "qwerty",
+        "hash": "$2a$10$kLuvsyFxaHZJUZEucZqu.OFwM7mcRHHvsxU6.55rjMVfQrMYYjpSm",
+        "id": 3,
+        "dateCreated": "2022-07-29T01:05:16.993Z",
+        "dateUpdated": "2022-07-29T01:05:16.993Z"
+    },
+    {
+        "firstName": "yasdf",
+        "lastName": "yasdf",
+        "username": "yasdf",
+        "hash": "$2a$10$QYqW1uPdNWurosqH0bdORuqww2NMRZqTKNcDqBW6XvxwSRob6mS7e",
+        "id": 4,
+        "dateCreated": "2022-07-29T01:12:10.864Z",
+        "dateUpdated": "2022-07-29T01:12:10.864Z"
     }
 ]
