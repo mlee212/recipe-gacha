@@ -37,6 +37,10 @@ function Login() {
 
     return (
         <Layout>
+            <div>
+                hi
+                {process.env.VERCEL_ENV}
+            </div>
             <div className="card">
                 <h4 className="card-header">Login</h4>
                 <div className="card-body">

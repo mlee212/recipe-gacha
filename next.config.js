@@ -5,7 +5,7 @@
 
 // module.exports = nextConfig
 console.log(process.env.SEC)
-console.log(process.env.VERCEL_ENV)
+
 if (process.env.NODE_ENV === 'development') {
   const baseUrlMode = 'http://localhost:3000/api'
 }
