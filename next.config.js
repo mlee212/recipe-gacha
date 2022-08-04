@@ -5,7 +5,6 @@
 
 // module.exports = nextConfig
 console.log(process.env.SEC)
-
 if (process.env.NODE_ENV === 'development') {
   const baseUrlMode = 'http://localhost:3000/api'
 }
@@ -22,6 +21,6 @@ module.exports = {
     
       apiUrl: process.env.NODE_ENV === 'development'
           ? 'http://localhost:3000/api' // development api
-          : 'http://localhost:3000/api' // production api
+          : (process.env.NEXT_PUBLIC_VERCEL_ENV + '/api') // production api
   }
 }

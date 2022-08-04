@@ -37,10 +37,6 @@ function Login() {
 
     return (
         <Layout>
-            <div>
-                hi
-                {process.env.NEXT_PUBLIC_VERCEL_URL}
-            </div>
             <div className="card">
                 <h4 className="card-header">Login</h4>
                 <div className="card-body">
