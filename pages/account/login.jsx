@@ -38,6 +38,9 @@ function Login() {
     return (
         <Layout>
             <div className="card">
+                <div>
+                    {(process.env.NEXT_PUBLIC_VERCEL_ENV + '/api')}
+                </div>
                 <h4 className="card-header">Login</h4>
                 <div className="card-body">
                     <form onSubmit={handleSubmit(onSubmit)}>
