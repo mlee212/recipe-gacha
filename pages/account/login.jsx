@@ -39,7 +39,7 @@ function Login() {
         <Layout>
             <div className="card">
                 <div>
-                    {(process.env.NEXT_PUBLIC_VERCEL_ENV + '/api')}
+                    {(process.env.NEXT_PUBLIC_VERCEL_URL + '/api')}
                 </div>
                 <h4 className="card-header">Login</h4>
                 <div className="card-body">
