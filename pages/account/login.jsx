@@ -39,7 +39,7 @@ function Login() {
         <Layout>
             <div>
                 hi
-                {process.env.VERCEL_ENV}
+                {process.env.NEXT_PUBLIC_VERCEL_URL}
             </div>
             <div className="card">
                 <h4 className="card-header">Login</h4>
