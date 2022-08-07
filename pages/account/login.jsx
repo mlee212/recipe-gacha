@@ -38,9 +38,9 @@ function Login() {
     return (
         <Layout>
             <div className="card">
-                <div>
+                {/* <div>
                     {('https://' + process.env.NEXT_PUBLIC_VERCEL_URL + '/api')}
-                </div>
+                </div> */}
                 <h4 className="card-header">Login</h4>
                 <div className="card-body">
                     <form onSubmit={handleSubmit(onSubmit)}>

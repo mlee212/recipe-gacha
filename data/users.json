@@ -34,5 +34,23 @@
         "id": 4,
         "dateCreated": "2022-07-29T01:12:10.864Z",
         "dateUpdated": "2022-07-29T01:12:10.864Z"
+    },
+    {
+        "firstName": "testfirst",
+        "lastName": "testlast",
+        "username": "testuser",
+        "hash": "$2a$10$J/Ka/nj4bn/o791U6Lcg4em8hSmDdHOSNR6CfliT0B5hgJOoZtOHG",
+        "id": 5,
+        "dateCreated": "2022-08-07T17:26:11.627Z",
+        "dateUpdated": "2022-08-07T17:26:11.627Z"
+    },
+    {
+        "firstName": "matt",
+        "lastName": "lee",
+        "username": "mlee212",
+        "hash": "$2a$10$KaDvqg8U/IWt3tsgyZssJ.fMnzXcvudnKbn6wPkb/l.v4XyzAixnG",
+        "id": 6,
+        "dateCreated": "2022-08-07T18:10:45.247Z",
+        "dateUpdated": "2022-08-07T18:10:45.247Z"
     }
 ]
