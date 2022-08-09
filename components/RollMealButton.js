@@ -1,5 +1,7 @@
 import {React, useState} from "react"
-import styles from '../styles/RollMealButton.module.css'
+import { userService } from "services"
+import styles from '/styles/RollMealButton.module.css'
+userService
 
 export default function RollMealButton() {
     const [meals, setMeals] = useState([{
@@ -20,11 +22,12 @@ export default function RollMealButton() {
         const endpoint = '/api/rollmeal'
 
         const options = {
-            method: 'GET',
+            method: 'POST',
 
             headers: {
                 'Content-Type': 'application/json',
             },
+            body: JSON.stringify(userService.userValue?.username)
         }
 
         const response = await fetch(endpoint, options)

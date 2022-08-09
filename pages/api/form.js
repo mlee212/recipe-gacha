@@ -1,5 +1,4 @@
 import { MongoClient } from 'mongodb';
-
 export default async function handler(req, res) {
   // Get data submitted in request's body.
   const body = req.body
@@ -22,7 +21,7 @@ export default async function handler(req, res) {
 
   const db = client.db("recipe-gacha");
   
-  const yourCollection = db.collection("recipe-links");
+  const yourCollection = db.collection("recipe-links" + body.username);
 
   const result = await yourCollection.insert(body);
 

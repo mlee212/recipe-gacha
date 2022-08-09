@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { userService } from 'services';
 
 export default function RecipeForm() {
     const [recipeList, setRecipeList] = useState([]);
@@ -9,6 +10,7 @@ export default function RecipeForm() {
         const data = {
             name: e.target.name.value,
             url: e.target.url.value,
+            username: userService.userValue?.username
         }
 
         const JSONdata = JSON.stringify(data)
