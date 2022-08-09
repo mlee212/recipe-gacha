@@ -6,14 +6,15 @@ export default apiHandler({
     post: register
 });
 
-function register(req, res) {
+async function register(req, res) {
     // split out password from user details 
     const { password, ...user } = req.body;
 
     // validate
-    if (usersRepo.find(x => x.username === user.username))
+    if (await usersRepo.find(x => x.username === user.username)){
+        
         throw `User with the username "${user.username}" already exists`;
-
+    }
     // hash password
     user.hash = bcrypt.hashSync(password, 10);    
 
