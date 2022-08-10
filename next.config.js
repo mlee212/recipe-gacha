@@ -4,10 +4,10 @@
 // }
 
 // module.exports = nextConfig
-console.log(process.env.SEC)
-if (process.env.NODE_ENV === 'development') {
-  const baseUrlMode = 'http://localhost:3000/api'
-}
+// console.log(process.env.SEC)
+// if (process.env.NODE_ENV === 'development') {
+//   const baseUrlMode = 'http://localhost:3000/api'
+// }
 // else if {
 //   const baseUrlMode = `https://${req?.query?.hostname}`
 // }
@@ -19,8 +19,9 @@ module.exports = {
   },
   publicRuntimeConfig: {
     
-      apiUrl: process.env.NODE_ENV === 'development'
-          ? 'http://localhost:3000/api' // development api
-          : ('https://' + process.env.DOMURL + '/api') // production api
+      apiUrl: process.env.NEXT_PUBLIC_URL
+          // process.env.NODE_ENV === 'development'
+          // ? 'http://localhost:3000/api' // development api
+          // : ('https://' + process.env.DOMURL + '/api') // production api
   }
 }
