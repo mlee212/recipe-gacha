@@ -30,8 +30,9 @@ function Register() {
     const { register, handleSubmit, formState } = useForm(formOptions);
     const { errors } = formState;
 
-    function onSubmit(user) {
-        return userService.register(user)
+    async function onSubmit(user) {
+        return await userService.register(user)
+            .then(() => {console.log(user)})
             .then(() => {
                 alertService.success('Registration successful', { keepAfterRouteChange: true });
                 router.push('login');
