@@ -5,6 +5,16 @@
 
 // module.exports = nextConfig
 // console.log(process.env.SEC)
+
+var baseURLMode
+
+if (process.env.NEXT_PUBLIC_VERCEL_ENV === 'preview') {
+  baseURLMode = process.env.NEXT_PUBLIC_VERCEL_URL
+}
+else if (process.env.NEXT_PUBLIC_VERCEL_ENV === 'production') {
+  baseURLMode = 'recipe-gacha-two.vercel.app'
+}
+
 // if (process.env.NODE_ENV === 'development') {
 //   const baseUrlMode = 'http://localhost:3000/api'
 // }
@@ -19,9 +29,8 @@ module.exports = {
   },
   publicRuntimeConfig: {
     
-      apiUrl: process.env.NEXT_PUBLIC_URL
-          // process.env.NODE_ENV === 'development'
-          // ? 'http://localhost:3000/api' // development api
-          // : ('https://' + process.env.DOMURL + '/api') // production api
+      apiUrl: process.env.NODE_ENV === 'development'
+          ? 'http://localhost:3000/api' // development api
+          : ('https://' + baseURLMode + '/api') // production api
   }
 }

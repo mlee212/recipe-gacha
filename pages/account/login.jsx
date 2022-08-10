@@ -39,7 +39,7 @@ function Login() {
         <Layout>
             <div className="card">
                 <div>
-                    {('https://' + process.env.NEXT_PUBLIC_VERCEL_ENV)}
+                    {('https://' + process.env.NODE_ENV)}
                 </div>
                 <h4 className="card-header">Login</h4>
                 <div className="card-body">
