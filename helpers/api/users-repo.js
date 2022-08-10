@@ -31,7 +31,7 @@ async function create(user) {
 
     console.log("running: ", user)
     // add and save user
-    const client = await MongoClient.connect("mongodb+srv://mlee212:99NF9xXzOyH1ZM5u@cluster0.7myuhnv.mongodb.net/?retryWrites=true&w=majority");
+    const client = await MongoClient.connect("mongodb+srv://mlee212:yiKDuuEfhVzfuy13@cluster0.7myuhnv.mongodb.net/?retryWrites=true&w=majority");
 
     const db = client.db("users");
 
@@ -69,7 +69,7 @@ function _delete(id) {
 
 async function getAll() {
     
-    const client = await MongoClient.connect("mongodb+srv://mlee212:99NF9xXzOyH1ZM5u@cluster0.7myuhnv.mongodb.net/?retryWrites=true&w=majority");
+    const client = await MongoClient.connect("mongodb+srv://mlee212:yiKDuuEfhVzfuy13@cluster0.7myuhnv.mongodb.net/?retryWrites=true&w=majority");
 
     const db = client.db("users")
 
@@ -92,7 +92,7 @@ async function find(x) {
 async function saveData() {
     // fs.writeFileSync('data/users.json', JSON.stringify(users, null, 4));
 
-    const client = await MongoClient.connect("mongodb+srv://mlee212:99NF9xXzOyH1ZM5u@cluster0.7myuhnv.mongodb.net/?retryWrites=true&w=majority");
+    const client = await MongoClient.connect("mongodb+srv://mlee212:yiKDuuEfhVzfuy13@cluster0.7myuhnv.mongodb.net/?retryWrites=true&w=majority");
 
     const db = client.db("users");
 

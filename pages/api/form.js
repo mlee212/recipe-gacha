@@ -17,7 +17,7 @@ export default async function handler(req, res) {
 
   // console.log(JSON.parse(body))
 
-  const client = await MongoClient.connect("mongodb+srv://mlee212:99NF9xXzOyH1ZM5u@cluster0.7myuhnv.mongodb.net/?retryWrites=true&w=majority");
+  const client = await MongoClient.connect("mongodb+srv://mlee212:yiKDuuEfhVzfuy13@cluster0.7myuhnv.mongodb.net/?retryWrites=true&w=majority");
 
   const db = client.db("recipe-gacha");
   
