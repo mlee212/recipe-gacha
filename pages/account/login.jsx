@@ -25,8 +25,8 @@ function Login() {
     const { register, handleSubmit, formState } = useForm(formOptions);
     const { errors } = formState;
 
-    function onSubmit({ username, password }) {
-        return userService.login(username, password)
+    async function onSubmit({ username, password }) {
+        return await userService.login(username, password)
             .then(() => {
                 // get return url from query parameters or default to '/'
                 const returnUrl = router.query.returnUrl || '/';
