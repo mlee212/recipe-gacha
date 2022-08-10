@@ -32,6 +32,7 @@ function Register() {
 
     async function onSubmit(user) {
         return await userService.register(user)
+            console.log(user)
             .then(() => {
                 alertService.success('Registration successful', { keepAfterRouteChange: true });
                 router.push('login');
