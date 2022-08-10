@@ -21,7 +21,7 @@ export const userService = {
 };
 
 async function login(username, password) {
-    return fetchWrapper.post(`${baseUrl}/authenticate`, { username, password })
+    return await fetchWrapper.post(`${baseUrl}/authenticate`, { username, password })
         .then(user => {
             // publish user to subscribers and store in local storage to stay logged in between page refreshes
             userSubject.next(user);
@@ -39,7 +39,7 @@ function logout() {
 }
 
 async function register(user) {
-    return fetchWrapper.post(`${baseUrl}/register`, user);
+    return await fetchWrapper.post(`${baseUrl}/register`, user);
 }
 
 function getAll() {
