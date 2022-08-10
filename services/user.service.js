@@ -20,7 +20,7 @@ export const userService = {
     delete: _delete
 };
 
-function login(username, password) {
+async function login(username, password) {
     return fetchWrapper.post(`${baseUrl}/authenticate`, { username, password })
         .then(user => {
             // publish user to subscribers and store in local storage to stay logged in between page refreshes
@@ -38,7 +38,7 @@ function logout() {
     Router.push('/account/login');
 }
 
-function register(user) {
+async function register(user) {
     return fetchWrapper.post(`${baseUrl}/register`, user);
 }
 
